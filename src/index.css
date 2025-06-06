@@ -1,0 +1,56 @@
+@import './styles/variables.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-freeze-purple text-charcoal font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-purple-pain font-bold;
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+  
+  h2 {
+    @apply text-2xl md:text-3xl;
+  }
+  
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-3 font-medium rounded-md transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-opacity-50;
+  }
+
+  .btn-primary {
+    @apply btn bg-purple-pain text-white hover:shadow-lg focus:ring-purple-pain;
+  }
+
+  .btn-secondary {
+    @apply btn bg-ice-cold text-charcoal hover:bg-medium-purple focus:ring-ice-cold;
+  }
+
+  .btn-outline {
+    @apply btn border-2 border-purple-pain text-purple-pain hover:bg-purple-pain hover:text-white focus:ring-purple-pain;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-md focus:border-ice-cold focus:ring focus:ring-medium-purple focus:ring-opacity-50;
+  }
+
+  .container-custom {
+    @apply container mx-auto px-4 md:px-6 lg:px-8;
+  }
+}
